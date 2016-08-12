@@ -1,0 +1,109 @@
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  padding: 5px;
+  width: 40%;
+  margin-top: 10px;
+}
+
+#blackout .black, #blackened .black {
+      padding: 3px;
+      font-size: 1.1em;
+      background-color: #000;
+      display: inline-block;
+      margin:0px;
+      -webkit-clip-path: polygon(0 0, 97% 0, 100% 98%, 0 100%);
+      clip-path: polygon(0 0, 95% 0, 100% 96%, 0 100%);
+      margin-left: -5px;
+      color: #000;
+      border:none;
+    }
+
+#blackout .black div:nth-child(odd), #blackened .black div:nth-child(odd) { 
+      -webkit-clip-path: polygon(0 0, 87% 0, 90% 97%, 0 93%);
+        clip-path: polygon(0 0, 87% 0, 87% 97%, 0 93%);
+      }
+
+#origin .black {
+      background-color: #000;
+      color: #000;
+      border:none;
+      font-variant: none;
+      -webkit-clip-path: polygon(0 0, 97% 0, 100% 98%, 0 100%);
+      clip-path: polygon(0 0, 95% 0, 100% 96%, 0 100%);
+      color: #000;
+      }
+
+#origin .white {
+      background-color: #fff;
+      display: inline-block;
+      padding: none;
+      }
+
+#blackout .white, #blackened .white {
+      padding: 3px;
+      background-color: #fff;
+      display: inline-block;
+      margin:0px;
+      border: none;
+      padding:0px;
+      font-size: 1em;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      color: #000;
+    }
+    
+#origin .buttonProps, #origin button, button.button    {
+      outline: none;
+      background-color: #fff;
+      border: none;
+      padding:0px;
+      font-size: 1.1em;
+      color: #000 !important;
+      background-color: #fff;
+      text-transform: none !important;
+    }
+
+ #blackened {
+  width: 70%;
+  line-height: 1.4em; 
+  margin: auto;
+ }  
+
+ #blackened p {
+  margin: none;
+ }
+
+ .child-poems-list .pagenav{
+  list-style: none;
+  width: 100%;
+  padding: 7px;
+  margin: 10px;
+  border: 1px solid #efefef;
+
+ }
+
+ .child-poems-list .pagenav ul {
+  margin-top: .5em;
+  list-style: none;
+ }
+
+ .child-poems-list .pagenav li {
+  margin-top: 5px;
+  border-left: 20px solid black;
+  margin-left: 7px;
+  padding-left: 7px; 
+ }
