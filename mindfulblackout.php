@@ -102,7 +102,7 @@ function include_template_function( $template_path ) {
 
 function blackout_enqueue_scripts() {
     wp_enqueue_style( 'blackoutStyles', plugins_url( '/css/blackoutStyles.css', __FILE__ )  );
-    wp_enqueue_script( 'html2canvas', plugins_url( '/js/html2canvas.js', __FILE__), array(jquery), '1.0.0', true );
+    wp_enqueue_script( 'html2canvas', plugins_url( '/js/html2canvas.js', __FILE__), array('jquery'), '1.0.0', true );
     wp_enqueue_script( 'main', plugins_url( '/js/main.js', __FILE__), array(), '1.0.0', true );
     wp_enqueue_script( 'my-post-submitter', plugin_dir_url( __FILE__ ) . 'js/post-submitter.js', array( 'jquery' ) ); //post submission script
 
@@ -118,7 +118,7 @@ function makePoem($content) {
 	  $i = 0;
 	  $content = '';
 	  while ($i < $length) {
-	  	$content .= ' <button id="btn'. $i .'" class="buttonProps button" onclick="highLight(btn'. $i .')">' . $originText[$i] .'</button>';
+	  	$content .= ' <div id="btn'. $i .'" class="buttonProps button" onclick="highLight(btn'. $i .')">' . $originText[$i] .'</div>';
 	  	$i++;
 	  }
       
@@ -150,7 +150,6 @@ add_action( 'wp_enqueue_scripts', function() {
 });
 
 
-// if both logged in and not logged in users can send this AJAX request,
-// add both of these actions, otherwise add only the appropriate one
-add_action( 'wp_ajax_nopriv_my-post-submitter', 'my-post-submitter' );
+
 add_action( 'wp_ajax_my-post-submitter', 'my-post-submitter' );
+add_action( 'wp_ajax_nopriv_my-post-submitter', 'my-post-submitter' );

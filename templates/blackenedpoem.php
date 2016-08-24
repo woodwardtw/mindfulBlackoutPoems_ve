@@ -4,7 +4,5 @@
 	 echo '<a href="' . $parentlink . '"">Go back to the source</a>';
 	 ?>
 	  <div id="blackened">
-	  <?php 
-	  	the_content();
-	  	?>	  	
+	  <?php the_content();?>	  	
 	</div>
