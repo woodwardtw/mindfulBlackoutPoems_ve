@@ -1,5 +1,6 @@
 <div id="poemsource">
 <div class="poem-directions">Click on the words below to erase them. Click on the colored bar to bring them back. When you're done you can submit your poem or download it as image using the buttons at the bottom of the page.</div>
+
 	 <div class="entry-content" id="origin">
 
 	  <?php 

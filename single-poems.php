@@ -14,6 +14,7 @@ get_header(); ?>
    <header class="poem-title entry-header"><a href="<?php the_permalink(); ?>" rel="bookmark"><h2 class="entry-title"><?php the_title(); ?></h2></a></header>
    <div class="poem-directions">Click on the words below to erase them. Click on them again to bring them back. When you're done you can submit your poem or download it as image using the buttons at the bottom of the page.</div>
    <div class="go-home"><a href="http://artfulness.rampages.us/session-one/activity-writing/">Return to the Writing Exercise</a></div>
+
    <?php if( $post->post_parent !== 0 ) {
 	    require_once( plugin_dir_path( __FILE__ ).'/templates/blackenedpoem.php'); 
 
