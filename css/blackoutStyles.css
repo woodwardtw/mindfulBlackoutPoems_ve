@@ -1,12 +1,13 @@
-#origin {
+#origin, #b-poem {
   width: 80%;
   margin:auto;
+  font-size: 1.1em;
 }
 
 #blackout .black, #blackened .black {
       padding: 3px;
       font-size: 1.1em;
-      background-color: #000;
+      background-color: #fff;
       display: inline-block;
       margin:0px;
       -webkit-clip-path: polygon(0 0, 97% 0, 100% 98%, 0 100%);
@@ -21,21 +22,19 @@
         clip-path: polygon(0 0, 87% 0, 87% 97%, 0 93%);
       }
 
-#origin .black {
-      background-color: #000;
-      color: #000;
-      border:none;
-      font-variant: none;
+#origin .black, #b-poem .black {
+      background-color: rgb(95, 197, 197);
+      color: rgb(95, 197, 197);
       -webkit-clip-path: polygon(0 0, 97% 0, 100% 98%, 0 100%);
       clip-path: polygon(0 0, 95% 0, 100% 96%, 0 100%);
-      color: #000;
       display: inline-block;
       }
 
 #origin .white {
       background-color: #fff;
       display: inline-block;
-      padding: none;
+      color: #000;
+      font-size: 1em;
       }
 
 #blackout .white, #blackened .white {
@@ -50,17 +49,15 @@
       padding-right: 2px;
       padding-top: 0px;
       padding-bottom: 0px;
-      color: #000;
+      color: #000 !important;
     }
     
-.buttonProps, .button    {
+.buttonProps, .button, #gform_submit_button_1    {
       outline: none;
       background-color: #fff;
       border: none;
       padding:0px;
-      font-size: 1.1em;
       color: #000 !important;
-      background-color: #fff;
       text-transform: none !important;
       display: inline-block;
     }
@@ -75,13 +72,65 @@
   margin: none;
  }
 
- .child-poems-list .pagenav{
-  list-style: none;
-  width: 100%;
-  padding: 7px;
-  margin: 10px;
-  border: 1px solid #efefef;
+ 
 
+ input[type=submit] { 
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-top: 10px;
+ }
+.poem-buttons {
+  width: 50%;
+  margin:auto;
+}
+
+.poembutton, #gform_submit_button_1 {
+  font-family: 'Open Sans', sans-serif;
+    border: 1px solid #dfdfdf;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 8px 15px;
+    margin: 0 0 20px 0;
+    width: 100%;
+    resize: none;
+    margin-top: 10px;
+}
+
+#post-submission-form {
+  display: inline-block;
+}
+
+
+
+/** MAIN SOURCE POST  **/
+
+.poem-title .entry-title {
+  width: 40%;
+  margin: auto;
+  padding-bottom: 12px;
+  padding-top: 30px;  
+}
+
+#poemsource, #blackened {
+  width: 50%;
+  padding: 20px;
+  margin:auto;
+}
+
+
+.source {
+  margin-top: 10px; 
+  background-color: #efefef;
+  padding: 3px;
+}
+
+.child-poems-list .pagenav{
+  list-style: none;
+  width: 50%;
+  padding: 20px;
+  margin: auto;
+  border: 1px solid #efefef;
+  margin-bottom: 10px;
  }
 
  .child-poems-list .pagenav ul {
@@ -91,20 +140,34 @@
 
  .child-poems-list .pagenav li {
   margin-top: 5px;
-  border-left: 20px solid black;
+  border-left: 20px solid rgb(95, 197, 197);
   margin-left: 7px;
   padding-left: 7px; 
  }
 
- input[type=submit] { 
-  margin-bottom: 10px;
-  display: inline-block;
- }
-.poem-buttons {
+ .poem-parent {
   width: 50%;
-    margin: auto;
+  margin:auto;
+  padding: 3px;
+ }
+
+@media only screen and (max-width: 900px) {
+  .poem-title .entry-title {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 12px;
+  padding-top: 10px;  
 }
 
-#post-submission-form {
-  display: inline-block;
+#poemsource, #blackened {
+  width: 80%;
+  padding: 20px;
+  margin:auto;
+}
+
+.child-poems-list .pagenav{
+  width: 80%;
+
+ }
+
 }

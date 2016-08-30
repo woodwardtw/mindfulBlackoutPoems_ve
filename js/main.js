@@ -11,8 +11,10 @@ function highLight(div) {
     var className = div.getAttribute("class");
     if (className == "black") {
         div.className = "white";
+        grabIt();
     } else {
         div.className = "black";
+        grabIt();
     }
 }
 
@@ -35,8 +37,8 @@ function grabIt() {
     var theBody = document.getElementById('origin').innerHTML;     
 
 
-    document.getElementById('post-submission-title').value = theTitle;
-    document.getElementById('post-submission-content').value = theBody;      
+    document.getElementById('input_1_1').value = theTitle;
+    document.getElementById('input_1_2').value = theBody;      
 }
 
 
@@ -46,9 +48,10 @@ jQuery('#save_image_locally').click(function() {
             var a = document.createElement('a');
             // toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
             a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
-            a.download = 'blackoutpoem.jpg';
+            a.download = 'erasurePoem.jpg';
             a.click();
-        }
+        },
+        background: '#fff',
     });
 });
 
